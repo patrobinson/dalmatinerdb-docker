@@ -19,7 +19,7 @@ RUN sed -ie 's/RUNNER_USER=dalmatiner/RUNNER_USER=root/' /opt/dalmatinerdb/bin/d
 RUN mkdir -p /data/dalmatinerdb/etc
 
 # Install default config file
-RUN cp /opt/dalmatinerdb/etc/dalmatinerdb.conf.example /data/dalmatinerdb/etc/
+RUN cp /opt/dalmatinerdb/etc/dalmatinerdb.conf.example /data/dalmatinerdb/etc/dalmatinerdb.conf
 
 # Don't daemonise on startup
 RUN sed -ie 's/$ERTS_PATH\/run_erl -daemon $PIPE_DIR/$ERTS_PATH\/run_erl $PIPE_DIR/' /opt/dalmatinerdb/bin/ddb
