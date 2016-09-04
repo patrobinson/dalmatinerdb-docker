@@ -10,7 +10,7 @@ RUN apt-get -y update && \
       apt-get purge -y make gcc g++ git && \
       apt-get autoremove -y && \
       apt-get clean && \
-      cd ../ # && rm -r dalmatinerdb
+      cd / && rm -rf /dalmatinerdb
 
 # Run it as root
 RUN sed -ie 's/RUNNER_USER=dalmatiner/RUNNER_USER=root/' /opt/dalmatinerdb/bin/ddb
