@@ -25,5 +25,4 @@ RUN cp /opt/dalmatinerdb/etc/dalmatinerdb.conf.example /data/dalmatinerdb/etc/da
 RUN sed -ie 's/$ERTS_PATH\/run_erl -daemon $PIPE_DIR/$ERTS_PATH\/run_erl $PIPE_DIR/' /opt/dalmatinerdb/bin/ddb
 
 EXPOSE 5555
-ENTRYPOINT /opt/dalmatinerdb/bin/ddb
-CMD ["start"]
+CMD ["/opt/dalmatinerdb/bin/ddb", "start"]
