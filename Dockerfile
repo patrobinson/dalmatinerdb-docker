@@ -8,6 +8,7 @@ RUN apt-get -y update && \
       make package || true && \
       cp -r rel/pkg/deploy/dalmatinerdb /opt && \
       apt-get purge -y make gcc g++ git && \
+      apt-get autoremove -y && \
       apt-get clean && \
       cd ../ # && rm -r dalmatinerdb
 
